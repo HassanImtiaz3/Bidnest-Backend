@@ -11,17 +11,14 @@ class EmailService {
         port: 465,
         secure: true,
         auth: {
-          user: "bbidnest2@gmail.com",
-          pass: "Riphah@0306",
-        },
-        tls: {
-          rejectUnauthorized: false,
+          user: "hassanimtiazip@gmail.com",
+          pass: "eofepjqqjytwqarp",
         },
       });
 
       const mailOptions = {
         from: email,
-        to: "hassanimtiazip@gmail.com",
+        to: "no-reply@gmail.com",
         subject: "New Contact Form Submission",
         html: `
           <h3>New Contact Form Submission</h3>

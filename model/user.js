@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
+import { v4 as uuidv4 } from "uuid";
 
 const userSchema = new mongoose.Schema({
   firstName: { type: String, required: true },
@@ -7,7 +8,7 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   role: { type: String, required: true },
-
+  uuid : { type: String, required: true}
 });
 
-export const User = mongoose.model('User', userSchema);
+export const User = mongoose.model("User", userSchema);

@@ -8,12 +8,15 @@ class UserManager {
       const token = createToken(saveUser._id, saveUser.email);
       console.log("[INFO] User data successfully saved to the database.");
       console.log("[DEBUG] Saved User Record:", saveUser);
+      
+      console.log("asasasa",saveUser.uuid);
 
       const sanitizedUser = {
         _id : saveUser._id,
         firstName : saveUser.firstName,
         lastName : saveUser.lastName,
-        role : saveUser.role
+        role : saveUser.role,
+        uuid: saveUser.uuid,
       }
 
       return { token, saveUser : sanitizedUser };

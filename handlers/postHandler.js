@@ -13,15 +13,28 @@ class PostHandler {
     }
   }
 
-  static async getPosts() {
+  static async getPosts(userId) {
     try {
-      const posts = await Post.findOne().sort({ created_at: -1 }).exec();
+      const posts = await Post.find({ uuid: userId }).sort({ created_at: -1 }).exec();
       return posts;
     } catch (error) {
-      console.error("Error while getting post:", error);
-      throw new Error("Error getting post from database");
+      console.error("Error while getting posts:", error);
+      throw new Error("Error getting posts from database");
     }
   }
+
+
+  static async getAllPosts() {
+    try {
+      const posts = await Post.find().sort({ created_at: -1 }).exec();
+      return posts;
+    } catch (error) {
+      console.error("Error while getting all posts:", error);
+      throw new Error("Error getting all posts from database");
+    }
+  }
+  
+  
 }
 
 export default PostHandler;

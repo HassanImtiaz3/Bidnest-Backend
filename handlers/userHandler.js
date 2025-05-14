@@ -3,7 +3,7 @@ import { User } from "../model/user.js";
 class UserHandler {
   static async storeUser(userData) {
     try {
-      const { firstName, lastName, phoneNumber, email, password, role } =
+      const { firstName, lastName, phoneNumber, email, password, role, uuid } =
         userData;
 
       const newUserData = new User({
@@ -13,6 +13,7 @@ class UserHandler {
         email,
         password,
         role,
+        uuid,
       });
 
       const saveUserData = await newUserData.save();

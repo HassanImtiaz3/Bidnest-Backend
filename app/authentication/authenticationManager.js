@@ -16,7 +16,8 @@ class AuthenticationManager {
         lastName : user.lastName,
         company : user.company,
         experience : user.experience,
-        role : user.role
+        role : user.role,
+        uuid: user.uuid,
       }
 
       return { token , user : sanitizedUser };
@@ -37,7 +38,8 @@ class AuthenticationManager {
         _id : user._id,
         firstName : user.firstName,
         lastName : user.lastName,
-        role : user.role
+        role : user.role,
+        uuid: user.uuid,
       }
 
       return { token , user : sanitizedUser };

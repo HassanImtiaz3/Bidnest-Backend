@@ -4,5 +4,6 @@ const router = express.Router();
 
 router.post("/create-post", PostController.storePost)
 router.get("/post", PostController.getPosts)
+router.get("/posts", PostController.getAllPosts)
 
 export default router
