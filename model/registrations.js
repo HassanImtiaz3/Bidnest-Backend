@@ -15,6 +15,7 @@ const registrationSchema = new mongoose.Schema({
     country: { type: String, required: true },
     state: { type: String, required: false },
   },
+  uuid: { type: String, required: true },
 });
 
 export const Registration = mongoose.model('Registration', registrationSchema);

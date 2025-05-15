@@ -14,7 +14,8 @@ class RegistrationManager {
         lastName : saveVendor.lastName,
         company : saveVendor.company,
         experience : saveVendor.experience,
-        role : saveVendor.role
+        role : saveVendor.role,
+        uuid : saveVendor.uuid
       }
       return { token, saveVendor: sanitizedUser };
     } catch (error) {

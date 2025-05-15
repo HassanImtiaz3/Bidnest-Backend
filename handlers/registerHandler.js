@@ -13,6 +13,7 @@ class RegisterHandler {
         password,
         role,
         address,
+        uuid,
       } = vendorData;
 
       const { city, zipCode, country, state } = address;
@@ -32,6 +33,7 @@ class RegisterHandler {
           country,
           state,
         },
+        uuid,
       });
 
       const saveVendor = await newVendorRegister.save();

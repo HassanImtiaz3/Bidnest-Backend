@@ -4,6 +4,7 @@ class RegistrationController {
   static async vendorData(req, res) {
     try {
       const vendorData = req.body;
+      console.log("req body", req.body);
       const result = await registrationManager.vendorData(vendorData);
       console.log("[INFO] Vendor data successfully stored in the database.");
       res.status(200).json({
