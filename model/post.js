@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const postSchema = new mongoose.Schema({
-  uuid: { type: String, unique: true }, // Add UUID field
+  uuid: { type: String },
   contactName: { type: String, required: true },
   companyName: { type: String, required: true },
   productName: { type: String, required: true },
