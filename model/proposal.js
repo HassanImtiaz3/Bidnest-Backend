@@ -6,7 +6,7 @@ const proposalSchema = new mongoose.Schema({
   // Additional Identifiers
   userId: { type: String, required: true },
   vendorId: { type: String, required: true },
-
+  postId : { type : String, required: true},
   // Vendor Details
   vendorName: { type: String, required: true },
   vendorCompany: { type: String, required: true },
@@ -35,6 +35,13 @@ const proposalSchema = new mongoose.Schema({
   // Timestamps
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
+
+  category: { type: String, required: true },
+  approval: {
+    type: String,
+    enum: ["pending", "confirmed", "rejected" , "in process"],
+    default: "pending",
+  },
 });
 
 export default mongoose.model("Proposal", proposalSchema);

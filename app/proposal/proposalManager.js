@@ -6,8 +6,12 @@ class ProposalManager {
     return await proposal.save();
   }
 
-  static async getProposalsByVendor(userId) {
-    return await Proposal.find({ userId: userId });
+  static async getProposalsByFilter({ userId, vendorId }) {
+    const filter = {};
+    if (userId) filter.userId = userId;
+    if (vendorId) filter.vendorId = vendorId;
+  
+    return await Proposal.find(filter);
   }
   
 
