@@ -23,14 +23,14 @@ const proposalSchema = new mongoose.Schema({
   totalPrice: { type: Number, required: true },
 
   // Device Specification
-  productName: { type: String, required: true },
-  description: { type: String, required: true },
-  modelNumber: { type: String, required: true },
-  color: { type: String, required: true },
-  size: { type: String, required: true },
-  weight: { type: String, required: true },
-  warranty: { type: String, required: true },
-  deliveryTime: { type: String, required: true },
+  productName: { type: String },
+  description: { type: String},
+  modelNumber: { type: String},
+  color: { type: String},
+  size: { type: String},
+  weight: { type: String},
+  warranty: { type: String},
+  deliveryTime: { type: String},
 
   // Timestamps
   createdAt: { type: Date, default: Date.now },

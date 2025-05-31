@@ -18,6 +18,9 @@ class AuthenticationManager {
         experience : user.experience,
         role : user.role,
         uuid: user.uuid,
+        phoneNumber : user.phoneNumber,
+        email : user.email,
+        address : user.address,
       }
 
       return { token , user : sanitizedUser };
