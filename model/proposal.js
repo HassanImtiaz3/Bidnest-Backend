@@ -4,23 +4,23 @@ import mongoose from "mongoose";
 
 const proposalSchema = new mongoose.Schema({
   // Additional Identifiers
-  userId: { type: String, required: true },
-  vendorId: { type: String, required: true },
-  postId : { type : String, required: true},
+  userId: { type: String, },
+  vendorId: { type: String, },
+  postId : { type : String, },
   // Vendor Details
-  vendorName: { type: String, required: true },
-  vendorCompany: { type: String, required: true },
-  vendorPhone: { type: String, required: true },
-  vendorEmail: { type: String, required: true },
-  vendorAddress: { type: String, required: true },
+  vendorName: { type: String, },
+  vendorCompany: { type: String,},
+  vendorPhone: { type: String, },
+  vendorEmail: { type: String,  },
+  vendorAddress: { type: String, },
 
   // Bid Information
-  postingTitle: { type: String, required: true },
-  bidDate: { type: Date, required: true },
-  offerPrice: { type: Number, required: true },
-  quantity: { type: Number, required: true },
-  unitPrice: { type: Number, required: true },
-  totalPrice: { type: Number, required: true },
+  postingTitle: { type: String },
+  bidDate: { type: Date},
+  offerPrice: { type: Number},
+  quantity: { type: Number},
+  unitPrice: { type: Number},
+  totalPrice: { type: Number},
 
   // Device Specification
   productName: { type: String },
@@ -36,10 +36,10 @@ const proposalSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 
-  category: { type: String, required: true },
+  category: { type: String },
   approval: {
     type: String,
-    enum: ["pending", "confirmed", "rejected" , "in process"],
+    enum: ["pending", "confirmed", "rejected" , "pending_financial", "ready_for_financial_round"],
     default: "pending",
   },
 });

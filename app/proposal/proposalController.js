@@ -70,7 +70,7 @@ static async updateProposalStatus(req, res) {
     const { id } = req.params;
     const { status } = req.body;
 
-    if (!['approved', 'rejected', 'pending'].includes(status)) {
+    if (!['approved', 'rejected', 'pending', 'ready_for_financial_round'].includes(status)) {
       return res.status(400).json({ message: "Invalid status value" });
     }
 
