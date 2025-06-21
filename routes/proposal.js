@@ -4,6 +4,7 @@ import ProposalController from "../app/proposal/proposalController.js";
 const router = express.Router();
 
 router.post('/submit', ProposalController.submitProposal);
+router.put('/update/:id', ProposalController.updateProposal);
 router.get('/vendor', ProposalController.getProposals);
 router.get('/all', ProposalController.getAllProposals);
 router.patch('/proposals/:id/status', ProposalController.updateProposalStatus);

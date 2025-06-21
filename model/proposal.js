@@ -39,7 +39,7 @@ const proposalSchema = new mongoose.Schema({
   category: { type: String },
   approval: {
     type: String,
-    enum: ["pending", "confirmed", "rejected" , "pending_financial", "ready_for_financial_round"],
+    enum: ["pending", "confirmed", "rejected" , "pending_financial", "ready_for_financial_round", "bid_successful"],
     default: "pending",
   },
 });

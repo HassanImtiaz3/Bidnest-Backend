@@ -10,13 +10,16 @@ class ProposalManager {
     const filter = {};
     if (userId) filter.userId = userId;
     if (vendorId) filter.vendorId = vendorId;
-  
+
     return await Proposal.find(filter);
   }
-  
 
   static async getAllProposals() {
     return await Proposal.find();
+  }
+
+  static async updateProposal(id, updatedData) {
+    return await Proposal.findByIdAndUpdate(id, updatedData, { new: true });
   }
 }
 
